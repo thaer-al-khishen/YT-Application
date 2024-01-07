@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentResultListener
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.ytapplication.databinding.FragmentSecondBinding
 
@@ -33,6 +34,13 @@ class SecondFragment: Fragment() {
                 (requireActivity() as MainActivity).onSecondFragmentButtonClicked()
             }
         }
+
+        findNavController().previousBackStackEntry?.savedStateHandle?.set("StringKey", "Data from second fragment")
+
+        parentFragmentManager.setFragmentResultListener("RequestKey", viewLifecycleOwner) { requestKey, result ->
+            binding.tvSecondFragment.text = result.getString("ThirdFragmentString")
+        }
+
     }
 
 }

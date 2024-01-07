@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.ytapplication.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -27,6 +28,11 @@ class FirstFragment : Fragment() {
                 (requireActivity() as MainActivity).onFirstFragmentButtonClicked(firstFragmentText = "Text coming from first fragment")
             }
         }
+
+        findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<String>("StringKey")?.observe(viewLifecycleOwner) {
+            binding.textView.text = it
+        }
+
     }
 
 }

@@ -24,8 +24,7 @@
             app:argType="com.example.ytapplication.SecondFragmentInput" />
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment"
-            app:popUpTo="@id/nav_graph"/>
+            app:destination="@id/thirdFragment"/>
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"

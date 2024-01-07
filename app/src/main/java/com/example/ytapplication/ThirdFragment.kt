@@ -23,6 +23,8 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        parentFragmentManager.setFragmentResult("RequestKey", Bundle().apply { putString("ThirdFragmentString", "Data from Third Fragment") })
+
     }
 
 }
