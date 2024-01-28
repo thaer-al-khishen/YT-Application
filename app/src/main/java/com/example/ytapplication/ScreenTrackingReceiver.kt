@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 
-class ScreenOnOffReceiver : BroadcastReceiver() {
+class ScreenTrackingReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         when (intent?.action) {
             Intent.ACTION_SCREEN_OFF -> Log.d("ScreenReceiver", "Screen turned off")

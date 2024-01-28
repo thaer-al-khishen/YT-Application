@@ -1,6 +1,5 @@
 package com.example.ytapplication
 
-import android.app.PendingIntent
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
@@ -12,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     //System
-    private val screenReceiver = ScreenOnOffReceiver()
+    private val screenReceiver = ScreenTrackingReceiver()
 
     //Local
     private val customReceiver = CustomReceiver()
