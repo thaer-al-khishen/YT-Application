@@ -59,6 +59,7 @@ class MusicService : Service() {
             .setContentTitle("Music Player")
             .setContentText("Playing your favorite music!")
             .setSmallIcon(R.drawable.ic_launcher_background)
+            .setSilent(true)
 
         return builder.build()
     }
